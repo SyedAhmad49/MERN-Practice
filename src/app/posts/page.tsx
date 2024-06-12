@@ -115,7 +115,7 @@ export default function Posts() {
           )
         })}
       </div>
-      {posts && posts.length > 0 && <div>
+      {posts && posts.length >= 0 && <div>
         <div style={{ marginBottom: "10px" }}><input style={{ padding: "10px", minWidth: "calc(30%)" }} placeholder="Title" value={post?.title} onChange={(e) => setPost({ ...post, title: e.target.value })} /></div>
         <div style={{ marginBottom: "10px" }}><input style={{ padding: "10px", minWidth: "calc(30%)" }} placeholder="Content" value={post?.content} onChange={(e) => setPost({ ...post, content: e.target.value })} /></div>
         <div style={{ textAlign: "right", maxWidth: "calc(30%)" }}><button style={{ minWidth: "100px", padding: "5px" }} onClick={() => addPost(post)}>Add Post</button></div>
